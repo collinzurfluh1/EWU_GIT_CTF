@@ -1,0 +1,10 @@
+
+
+
+Welcome to EWU GIT CTF!!!
+
+To start playing, clone the game repository by running:
+
+    git clone gamemaster@localhost:~/ctf-repo
+
+Once this is cloned cd into rtf-repo and type "cat readme.md"
