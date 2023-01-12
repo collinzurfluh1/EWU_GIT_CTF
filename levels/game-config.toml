@@ -6,9 +6,9 @@ flags = ['start-here']
 
 [[levels]]
 title = 'start-here'
-branch = 'start-here'
+branch = 'main'
 solution_checker = 'hooks/checkers/start-here.sh'
-flags = ['basic-1']
+flags = ['EWU_FLG_NOOB']
 
 [[levels]]
 title = 'basic-1'
