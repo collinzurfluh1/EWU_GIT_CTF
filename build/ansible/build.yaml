@@ -4,7 +4,7 @@
       git:
         repo: "https://github.com/collinzurfluh1/EWU_GIT_CTF.git"
         dest: /home/{{ ansible_facts['user_id'] }}/EWU_GIT_CTF
-        version: dev
+        version: main
         accept_hostkey: yes
 
     - name: Compile rust
