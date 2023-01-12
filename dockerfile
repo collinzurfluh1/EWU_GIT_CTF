@@ -42,9 +42,9 @@ COPY build/login_banner.txt /etc/motd
 RUN /etc/init.d/ssh start && ssh-keyscan -H localhost >> /home/player/.ssh/known_hosts && ssh-keyscan -H localhost
 
 # This file adds the player's ssh public key from before
-RUN git clone --bare https://github.com/collinzurfluh1/EWU_GIT_CTF.git /home/gamemaster/ctf-repo
+RUN git clone --bare hhttps://github.com/collinzurfluh1/EWU_GIT_CTF_LEVELS.git /home/gamemaster/ctf-repo
 # Set up the other remote for the remote stages
-RUN git clone --bare https://github.com/collinzurfluh1/EWU_GIT_CTF.git /home/gamemaster/forked-ctf-repo
+RUN git clone --bare https://github.com/collinzurfluh1/EWU_GIT_CTF_LEVELS.git /home/gamemaster/forked-ctf-repo
 COPY build/gamemaster_entrypoint.sh /home/gamemaster
 RUN chown gamemaster:gamemaster /home/gamemaster/gamemaster_entrypoint.sh
 RUN chmod 770 /home/gamemaster/gamemaster_entrypoint.sh
