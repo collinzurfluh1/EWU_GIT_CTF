@@ -34,16 +34,6 @@ COPY build/player_zshrc.sh /home/player/.zshrc
 RUN chown player:player /home/player/.zshrc
 RUN chmod 770 /home/player/.zshrc
 
-# Do the same for the tester account.
-COPY build/tester_entrypoint.sh /home/tester
-RUN chown tester:tester /home/tester/tester_entrypoint.sh
-RUN chmod 770 /home/tester/tester_entrypoint.sh
-RUN su -c "/home/tester/tester_entrypoint.sh" - tester
-COPY build/tester_zshrc.sh /home/tester/.zshrc
-RUN chown tester:tester /home/tester/.zshrc
-RUN chmod 770 /home/tester/.zshrc
-
-
 # Set up SSH
 RUN mkdir /var/run/sshd
 COPY build/sshd_config /etc/ssh/sshd_config
