@@ -2,20 +2,20 @@
   tasks:
     - name: Pull CTF repo
       git:
-        repo: "https://github.com/TheCoreMan/make-git-better-2.git"
-        dest: /home/{{ ansible_facts['user_id'] }}/ewu_ctf
+        repo: "https://github.com/collinzurfluh1/EWU_GIT_CTF.git"
+        dest: /home/{{ ansible_facts['user_id'] }}/EWU_GIT_CTF
         version: dev
         accept_hostkey: yes
 
     - name: Compile rust
-      command: /home/{{ ansible_facts['user_id'] }}/.cargo/bin/cargo run --bin generate-pre-receive-hook -- --verbose /home/{{ ansible_facts['user_id'] }}/ewu_ctf/levels/game-config.toml src/bin/templates/hook.tmpl
+      command: /home/{{ ansible_facts['user_id'] }}/.cargo/bin/cargo run --bin generate-pre-receive-hook -- --verbose /home/{{ ansible_facts['user_id'] }}/EWU_GIT_CTF/levels/game-config.toml src/bin/templates/hook.tmpl
       args:
-        chdir: /home/{{ ansible_facts['user_id'] }}/ewu_ctf/scripts
+        chdir: /home/{{ ansible_facts['user_id'] }}/EWU_GIT_CTF/scripts
 
     - name: Build Docker image
-      shell: docker build --tag mgb:0.1 --build-arg CACHE_DATE=$(date +%Y-%m-%d:%H:%M:%S) .
+      shell: docker build --tag ewu_ctf --build-arg CACHE_DATE=$(date +%Y-%m-%d:%H:%M:%S) .
       args:
-        chdir: /home/{{ ansible_facts['user_id'] }}/ewu_ctf
+        chdir: /home/{{ ansible_facts['user_id'] }}/EWU_GIT_CTF
 
     - name: Clone docker-tcp-switchboard
       git:
@@ -37,7 +37,7 @@
 
     - name: Copy our switchboard conf to /etc
       copy:
-        src: /home/{{ ansible_facts['user_id'] }}/ewu_ctf/build/docker-tcp-switchboard.conf
+        src: /home/{{ ansible_facts['user_id'] }}/EWU_GIT_CTF/build/docker-tcp-switchboard.conf
         dest: /etc/docker-tcp-switchboard.conf
         remote_src: yes
       become: yes
