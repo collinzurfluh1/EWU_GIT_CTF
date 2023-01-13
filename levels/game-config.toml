@@ -1,12 +1,12 @@
 [[levels]]
 title = 'clone'
-branch = 'master'
+branch = 'main'
 solution_checker = 'echo No pushing to master. Read the README file; exit 1'
 flags = ['EWU_FLG_IDIDIT']
 
 [[levels]]
 title = 'level-1'
-branch = 'main'
+branch = 'level-1'
 solution_checker = 'hooks/checkers/start-here.sh'
 flags = ['EWU_FLG_NOOB']
 
