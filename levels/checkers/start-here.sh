@@ -18,7 +18,7 @@ pushd $dump_dir
 popd
 
 # Check how many commits the user needed - should be two (the user commit + merge commit)!
-commit_amount=$( git log start-here-tag..$new --oneline | wc -l )
+commit_amount=$( git log level-1..$new --oneline | wc -l )
 if [ $commit_amount -ne 1 ];
     then reject-solution "The files should have been added in a single commit, but I've found ${commit_amount} commits in the log. To reset and try again, delete your local start-here branch, checkout the original start-here branch again and try again.";
 fi
