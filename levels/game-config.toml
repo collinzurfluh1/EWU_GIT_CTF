@@ -7,12 +7,18 @@ flags = ['EWU_FLG_IDIDIT']
 [[levels]]
 title = 'level-1'
 branch = 'level-1'
-solution_checker = 'hooks/checkers/start-here.sh'
+solution_checker = 'hooks/checkers/level-1.sh'
 flags = ['EWU_FLG_NOOB']
 
 [[levels]]
 title = 'level-2'
-branch = 'scorpion-treenware-gestatory'
-solution_checker = 'hooks/checkers/basic-1.sh'
-flags = ['basic-2']
+branch = 'level-2'
+solution_checker = 'hooks/checkers/level-2.sh'
+flags = ['EWU_FLG_BETTER']
+
+[[levels]]
+title = 'level-3'
+branch = 'level-3'
+solution_checker = 'hooks/checkers/level-3.sh'
+flags = ['EWU_FLG_CRYPTOGENIOUS']
 

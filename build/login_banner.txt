@@ -7,4 +7,4 @@ To start playing, clone the game repository by running:
 
     git clone gamemaster@localhost:~/ctf-repo
 
-Once this is cloned cd into rtf-repo and type "cat readme.md"
+Once this is cloned cd into ctf-repo and type "cat readme.md"
