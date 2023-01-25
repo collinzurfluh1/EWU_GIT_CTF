@@ -33,6 +33,6 @@ fi
 
 # We know that there's only one commit in the changes - otherwise it would have failed before.
 number_of_files_changed=$( git diff --stat $old $new | grep "files changed" | awk ' {print $1} ' )
-if [[ $number_of_files_changed -ne 2 ]]
+if [[ $number_of_files_changed -ne 4 ]]
     then reject-solution "More than 4 files were changed! Only add ethereum.txt, bitcoin.txt, raven.txt and doge.txt. Check out the original branch and try again.";
 fi
