@@ -22,3 +22,21 @@ branch = 'level-3'
 solution_checker = 'hooks/checkers/level-3.sh'
 flags = ['EWU_FLG_CRYPTOGENIOUS']
 
+[[levels]]
+title = 'level-4'
+branch = 'level-4'
+solution_checker = 'hooks/checkers/level-4.sh'
+flags = ['EWU_FLG_STUDABEST']
+
+[[levels]]
+title = 'level-5'
+branch = 'level-5'
+solution_checker = 'hooks/checkers/level-5.sh'
+flags = ['EWU_FLG_AREUSERIOUS']
+
+[[levels]]
+title = 'level-6'
+branch = 'level-6'
+solution_checker = 'hooks/checkers/level-6.sh'
+flags = ['EWU_FLG_SPYWARENOMORE']
+
