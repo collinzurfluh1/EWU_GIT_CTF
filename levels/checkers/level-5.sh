@@ -23,6 +23,6 @@ popd
 
 # We know that there's only one commit in the changes - otherwise it would have failed before.
 number_of_files_changed=$( git diff --stat $old $new | grep "files changed" | awk ' {print $1} ' )
-if [[ $number_of_files_changed -ne 2v]]
-    then reject-solution "More than 2 files was changed! Only add windowsSucks.txt and macRocks.";
+if [[ $number_of_files_changed -ne 2 ]]
+    then reject-solution "More than 2 files was changed! Only add windowsSucks.txt and macRocks.txt";
 fi
