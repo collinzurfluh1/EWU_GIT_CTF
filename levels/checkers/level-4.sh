@@ -12,6 +12,10 @@ pushd $dump_dir
         then reject-solution "level4Pro.txt is missing! Try again.";
     fi
 
+    if [ ! -f level4Intermediate.txt ];
+        then reject-solution "level4Intermediate.txt is missing! Try again.";
+    fi
+
     if [ -f level4Noob.txt ];
         then reject-solution "Incoming Message: theres a secret mission and we have to remove level4Noob.txt from git and commit again and push. ex: git rm level4Noob.txt.";
     fi
@@ -19,6 +23,6 @@ popd
 
 # We know that there's only one commit in the changes - otherwise it would have failed before.
 number_of_files_changed=$( git diff --stat $old $new | grep "files changed" | awk ' {print $1} ' )
-if [[ $number_of_files_changed -ne 1 ]]
-    then reject-solution "More than 1 files was changed! Only add level4Pro.txt.";
+if [[ $number_of_files_changed -ne 2 ]]
+    then reject-solution "More than 1 files was changed! Only add level4Pro.txt and level4Intermediate.txt.";
 fi
