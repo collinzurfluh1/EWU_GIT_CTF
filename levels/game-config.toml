@@ -52,3 +52,9 @@ branch = 'level-8'
 solution_checker = 'hooks/checkers/level-8.sh'
 flags = ['EWU_FLG_MERGEKING']
 
+[[levels]]
+title = 'level-9'
+branch = 'level-9'
+solution_checker = 'hooks/checkers/level-9.sh'
+flags = ['EWU_FLG_WOWJUSTWOW']
+
