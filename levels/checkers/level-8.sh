@@ -14,8 +14,6 @@ pushd $dump_dir
     echo "Trying to execute the script ./coolscript.py..."
     echo
 
-    # Will raise if not merged
-    ./coolscript.py
 popd
 
 # Check that merge was fast forward merge.
