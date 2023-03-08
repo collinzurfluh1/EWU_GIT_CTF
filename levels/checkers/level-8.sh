@@ -7,7 +7,7 @@ read old new ref < /dev/stdin
 dump_dir=$(dump-commit-to-directory $new)
 
 pushd $dump_dir
-    if [ ! -f runme.py ];
+    if [ ! -f coolscript.py ];
         then reject-solution "coolscript.py is missing.";
     fi
 
