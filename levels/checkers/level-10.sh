@@ -24,7 +24,7 @@ popd
 commit_amount=$( git log level-2..$new --oneline | wc -l )
 echo $commit_amount
 
-if [ $commit_amount -ne 2 ];
+if [ $commit_amount -ne 24 ];
     then reject-solution "Seems like you didnt merge and then do a merge revert.";
 fi
 
