@@ -58,3 +58,9 @@ branch = 'level-9'
 solution_checker = 'hooks/checkers/level-9.sh'
 flags = ['EWU_FLG_WOWJUSTWOW']
 
+[[levels]]
+title = 'level-10'
+branch = 'level-10'
+solution_checker = 'hooks/checkers/level-10.sh'
+flags = ['EWU_FLG_WISHICOULD']
+
