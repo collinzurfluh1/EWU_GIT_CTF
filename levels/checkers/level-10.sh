@@ -11,20 +11,19 @@ pushd $dump_dir
         then reject-solution "coolscript.py is missing.";
     fi
 
-    echo "Trying to execute the script ./coolscript.py..."
-    echo
-    
-    chmod 777 coolscript.py
-    ./coolscript.py
-
-    if [[ $(./coolscript.py) != *"The coolest text you can find."* ]] ; then
-        reject-solution "Theres an error in this code. Use git revert to revert your changes. Then push that code."
+    if [ -f dummyscript.py ];
+        then reject-solution "You didnt revert the merge correctly.";
     fi
+
+    if [ -f differentscripts.py ];
+        then reject-solution "You didnt revert the merge correctly.";
+    fi
+
 popd
 
 how_many_parents=$(how_many_parents $new)
-if [ $how_many_parents -ne 1 ]; then
-    reject-solution "There should only be 1 commit."
+if [ $how_many_parents -ne 3 ]; then
+    reject-solution "You must not have merged and done a merge revert.."
 fi
 
 log_n=5
