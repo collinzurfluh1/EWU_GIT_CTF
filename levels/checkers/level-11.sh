@@ -16,8 +16,8 @@ pushd $dump_dir
     chmod +x coolscript.py
     ./coolscript.py
 
-    if [[ $(./coolscript.py) != *"If Cinderella’s shoe fit perfectly"* ]] || [[ $(./coolscript.py) != *"Friends buy you food"* ]] || [[ $(./coolscript.py) != *"Some people are like clouds"* ]] ; then
-        reject-solution "Seems like the script isn't printing all the required resources. It should print a Git Koan, a quote about flags, and a quote about git."
+    if [[ $(./coolscript.py) != *"Best friends eat your"* ]] || [[ $(./coolscript.py) != *"shoe fit perfectly"* ]] || [[ $(./coolscript.py) != *"people are like"* ]] ; then
+        reject-solution "Seems like the script isn't printing all the required resources."
     fi
 
     if [ -f add_resources.sh ];
