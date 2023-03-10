@@ -13,7 +13,7 @@ pushd $dump_dir
 
     echo "Trying to execute the script ./coolscript.py..."
     echo
-
+    chmod +x coolscript.py
     ./coolscript.py
 
     if [[ $(./coolscript.py) != *"If Cinderella’s shoe fit perfectly"* ]] || [[ $(./coolscript.py) != *"Friends buy you food"* ]] || [[ $(./coolscript.py) != *"Some people are like clouds"* ]] ; then
