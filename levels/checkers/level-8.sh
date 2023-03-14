@@ -16,9 +16,7 @@ pushd $dump_dir
 
 popd
 
-# Check that merge was fast forward merge.
-new_commit=$(get_commit_of $new)
-target_commit=$(get_commit_of mergehelper1-tag)
-if [ "$new_commit" != "$target_commit" ]; then
-    reject-solution "Merge should have been a fast-forward merge. Try again."
+how_many_parents=$(how_many_parents $new)
+if [ $how_many_parents -ne 2 ]; then
+    reject-solution "Pushed commit isn't a merge commit! Saw only $how_many_parents for this commit, expected 2. Try again."
 fi
