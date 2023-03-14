@@ -8,7 +8,11 @@ dump_dir=$(dump-commit-to-directory $new)
 
 pushd $dump_dir
     if [ ! -f coolscript.py ];
-        then reject-solution "coolscript.py is missing.";
+        then reject-solution "Ayo what happened to coolscript.py???";
+    fi
+    
+    if [ ! -f coolestscript.py ];
+        then reject-solution "Hmmm seems like the merge didn't go right. Are you sure you merged?";
     fi
     
     echo "Trying to execute the script ./coolscript.py..."
