@@ -44,7 +44,7 @@ flags = ['EWU_FLG_SPYWARENOMORE']
 title = 'level-7'
 branch = 'level-7'
 solution_checker = 'hooks/checkers/level-7.sh'
-flags = ['EWU_FLG_URINITINGIT']
+flags = ['EWU_FLG_TOMERGEORNOT']
 
 [[levels]]
 title = 'level-8'
