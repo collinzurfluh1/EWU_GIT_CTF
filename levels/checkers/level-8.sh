@@ -10,6 +10,9 @@ pushd $dump_dir
     if [ ! -f coolscript.py ];
         then reject-solution "coolscript.py is missing.";
     fi
+    
+    echo "Trying to execute the script ./coolscript.py..."
+    echo
 
 popd
 
