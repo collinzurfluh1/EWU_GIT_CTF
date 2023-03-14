@@ -34,10 +34,10 @@ pushd $dump_dir
     chmod 777 coolscript.py
     ./coolscript.py
 
-    if [[ $(./coolscript.py) == *"giv u up neva gonna let u dowwwnnnn"* ]] ; then
+    if [[ $(./coolscript.py) == *"Never gonna giv u up neva gonna let u dowwwnnnn never gonna run around and desert you"* ]] ; then
         reject-solution "Seems like the script still prints the mistake."
     fi
-    if [[ $(./coolscript.py) != *"give you up never gonna let you down"* ]] ; then
+    if [[ $(./coolscript.py) != *"Never gonna give you up never gonna let u down never gonna run around and desert you."* ]] ; then
         reject-solution "Seems like the merge didn't go right - the error still persists."
     fi
 popd
