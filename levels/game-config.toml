@@ -69,3 +69,9 @@ title = 'level-11'
 branch = 'level-11'
 solution_checker = 'hooks/checkers/level-11.sh'
 flags = ['EWU_FLG_REBASEDIT']
+
+[[levels]]
+title = 'level-12'
+branch = 'level-12'
+solution_checker = 'hooks/checkers/level-12.sh'
+flags = ['EWU_FLG_CRUSHEDITEZ']
