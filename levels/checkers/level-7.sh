@@ -7,8 +7,12 @@ read old new ref < /dev/stdin
 dump_dir=$(dump-commit-to-directory $new)
 
 pushd $dump_dir
-    if [ ! -f mergerscript.py ];
-        then reject-solution "mergerscript.py is missing.";
+    if [ ! -f mergedscript.py ];
+        then reject-solution "Oops looks like the merge didnt work. Are you sure your merged?";
+    fi
+    
+    if [ ! -f coolscript.py ];
+        then reject-solution "What happened to coolscript.py?!?";
     fi
 
 popd
