@@ -37,7 +37,7 @@ pushd $dump_dir
     if [[ $(./coolscript.py) == *"Never gonna giv u up neva gonna let u dowwwnnnn never gonna run around and desert you"* ]] ; then
         reject-solution "Seems like the script still prints the mistake."
     fi
-    if [[ $(./coolscript.py) != *"Never gonna give you up never gonna let u down never gonna run around and desert you."* ]] ; then
+    if [[ $(./coolscript.py) != *"Never gonna give you up never gonna let you down never gonna run around and desert you."* ]] ; then
         reject-solution "Seems like the merge didn't go right - the error still persists."
     fi
 popd
