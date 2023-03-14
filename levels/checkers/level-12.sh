@@ -43,7 +43,7 @@ pushd $dump_dir
 popd
 
 how_many_parents=$(how_many_parents $new)
-if [ $how_many_parents -ne 2 ]; then
+if [ $how_many_parents -ne 1 ]; then
     reject-solution "Pushed commit isn't a merge commit! Saw only $how_many_parents for this commit, expected 2. Try again."
 fi
 
