@@ -32,7 +32,6 @@ RUN chmod 770 /home/player/.zshrc
 RUN mkdir /var/run/sshd
 COPY build/sshd_config /etc/ssh/sshd_config
 COPY build/login_banner.txt /etc/motd
-COPY build/.bashrc ~/.bashrc 
 
 RUN /etc/init.d/ssh start && ssh-keyscan -H localhost >> /home/player/.ssh/known_hosts && ssh-keyscan -H localhost
 
